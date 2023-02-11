@@ -1,13 +1,8 @@
-import Head from 'next/head';
 import Nav from '../components/Nav';
 import Works from '../components/Works';
 export default function Home() {
   return (
     <div className='bg-slate-800 text-slate-200 min-h-screen flex'>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className='bg-slate-700 w-20 lg:w-60'>
         <Nav className='w-20 lg:w-60'/>
       </div>
