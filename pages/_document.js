@@ -4,7 +4,7 @@ export default function(){
     return (
         <Html className='scroll-smooth'>
             <Head>
-                <title>JUNAI TSENDAYUSH - Portofolio</title>
+                
             </Head>
             <body>       
                 <Main />

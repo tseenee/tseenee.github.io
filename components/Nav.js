@@ -8,11 +8,11 @@ function NavItem({children, href}){
 
 export default function Nav({className}){
     return (
-        <nav className={`fixed h-full text-right border-l-4 border-orange-400 ${className}`}>
+        <nav className={`hidden lg:block fixed h-full text-right border-l-4 border-orange-400 ${className}`}>
             <ul>
                 <NavItem href="#home">home</NavItem>
-                <NavItem href="#works">works</NavItem>
                 <NavItem href="#about">about</NavItem>
+                <NavItem href="#works">works</NavItem>
             </ul>
         </nav>
     )
