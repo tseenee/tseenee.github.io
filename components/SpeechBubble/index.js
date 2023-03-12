@@ -1,25 +1,25 @@
-export default function({ className, bubbleClassName, children }){
+import React, { useRef } from "react";
+import { InView } from 'react-intersection-observer';
+
+import styles from './index.module.css';
+
+export default function({ className = '', bubbleClassName = '', children }){
+    
+    const ref = useRef(null)
+
     return (
-        <div className={className}>
-            <div className={`bubble rounded drop-shadow-lg ${bubbleClassName}`}>
-                {children}
-            </div>
-            <style jsx>{`
-                .bubble::after {
-                    @apply drop-shadow-lg;
-                    --bubble-size: 30px;
-                    content: "";
-                    width: 0px;
-                    height: 0px;
-                    position: absolute;
-                    right: var(--bubble-size);
-                    bottom: -var(--bubble-size);
-                    border-top: var(--bubble-size) solid rgb(71 85 105);
-                    border-right: var(--bubble-size) solid rgb(71 85 105);
-                    border-bottom: var(--bubble-size) solid transparent;
-                    border-left: var(--bubble-size) solid transparent;
-                }
-            `}</style>
-        </div>
+        <InView threshold={0.6}>
+            {({ inView, ref }) => (
+                <div ref={ref} className="h-[80vh]">
+                    {(
+                        <div className={`${className} ${inView ? 'opacity-100' : 'opacity-0'} transition-all sticky top-[30vh]`} ref={ref}>
+                            <div className={`bubble rounded p-6 drop-shadow-lg ${bubbleClassName} ${styles.bubble}`}>
+                                {children}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            )}
+        </InView>
     )
 }

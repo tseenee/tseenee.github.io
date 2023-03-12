@@ -1,0 +1,19 @@
+.bubble::after {
+    @apply drop-shadow-lg;
+    --bubble-size: 30px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: var(--bubble-size);
+    bottom: -59px;
+    border-top: var(--bubble-size) solid rgb(15 23 42 / var(--tw-bg-opacity)); 
+    border-right: var(--bubble-size) solid transparent;
+    border-bottom: var(--bubble-size) solid transparent;
+    border-left: var(--bubble-size) solid rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+
+.bubble-container {
+    
+}

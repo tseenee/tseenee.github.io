@@ -1,10 +1,12 @@
-function NavItem({children, href}){
+
+function NavItem({children, href = "#", onClick = () => {}}){
     return (
         <li>
-            <a className="px-4 py-2 block text-xl hover:bg-sky-600 transition-all" href={href}>{children}</a>
+            <a className="px-4 py-2 block text-xl hover:bg-sky-600 transition-all" href={href} onClick={onClick}>{children}</a>
         </li>
     )
 }
+
 
 export default function Nav({className}){
     return (
@@ -13,6 +15,7 @@ export default function Nav({className}){
                 <NavItem href="#home">home</NavItem>
                 <NavItem href="#about">about</NavItem>
                 <NavItem href="#works">works</NavItem>
+                <NavItem href="#contacts">contacts</NavItem>
             </ul>
         </nav>
     )

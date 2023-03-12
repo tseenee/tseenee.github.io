@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 export default function({ duration = 1000, children }){
     const [ visible, setVisible ] = useState(false);
@@ -26,4 +27,5 @@ export default function({ duration = 1000, children }){
                 </span>
             </div>
         );
+    else return <></>
 }

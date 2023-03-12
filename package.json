@@ -7,9 +7,17 @@
     "export": "next export"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "i18next": "^22.4.10",
     "next": "latest",
+    "next-i18next": "^13.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.2.0",
+    "react-intersection-observer": "^9.4.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
