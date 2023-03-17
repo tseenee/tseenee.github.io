@@ -36,23 +36,23 @@ export default function () {
             value={
               <div className="flex mt-2">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/tsend-ayush-junai-2aa731b7/#"
                   className="block p-2 rounded transition-all hover:bg-slate-700"
                 >
                   <FontAwesomeIcon size="2x" icon={faLinkedin} />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/tseenee"
                   className="block p-2 rounded transition-all hover:bg-slate-700"
                 >
                   <FontAwesomeIcon size="2x" icon={faGithub} />
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="block p-2 rounded transition-all hover:bg-slate-700"
                 >
                   <FontAwesomeIcon size="2x" icon={faFacebook} />
-                </a>
+                </a> */}
               </div>
             }
           />
